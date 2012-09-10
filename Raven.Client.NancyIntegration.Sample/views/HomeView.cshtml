@@ -1,0 +1,23 @@
+﻿@using Raven.Client.NancyIntegration.Sample
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<HomeViewModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomeView</title>
+</head>
+<body>
+    <ul>
+        @foreach(var doc in Model.Docs)
+        {
+            <li>@doc</li>
+        }
+    </ul>
+    @Html.RavenProfiler()
+</body>
+</html>

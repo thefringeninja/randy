@@ -1,0 +1,6 @@
+<script type="text/javascript" src="{|rootUrl|}assets/yepnope.js"></script>
+<script type="text/javascript">
+	yepnope([{ test: window.jQuery, nope: '{|rootUrl|}assets/jquery-1.6.1.min.js' }, 
+			{ test: window.jQuery && window.jQuery.fn.tmpl, nope: '{|rootUrl|}assets/jquery.tmpl.min.js' }, 
+			{load: '{|rootUrl|}assets/ravendb-profiler-scripts.js', complete: function() { jQuery(function() { RavenDBProfiler.initalize({ id:[{|id|}], url: '{|rootUrl|}' }); }) } }]);
+</script>
